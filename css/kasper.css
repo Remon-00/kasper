@@ -511,7 +511,7 @@ text-align: center;}
     }
 }
 .portfolio .img-container img{
-    max-width: 100%;
+    max-width: 105%;
     transition: 0.3s;
 }
 @media(min-width:768px){
