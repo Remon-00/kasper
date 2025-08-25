@@ -2,6 +2,7 @@
 :root{
     --main-color:#19c8fa;
     --second-color:rgb(15 116 143 / 70%);
+
 }
 /* end variables */
 /* Start Global Rules */
@@ -25,6 +26,11 @@ body{
 
     
 }
+ @media(Max-WIDTH:768PX) {
+    body{
+       margin-right: -2px;
+    }
+} 
 ul{
     list-style: none;
 }
@@ -33,13 +39,6 @@ ul{
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-}
-
-@media(Max-WIDTH:768PX) {
-    .container{
-        width: 350px;
-       
-    }
 }
 @media(Min-WIDTH:768PX) {
     .container{
@@ -337,7 +336,13 @@ animation-direction: alternate;
     grid-template-columns:repeat(auto-fill,minmax(550px , 1fr));
     margin-top: 40px;
     gap: 20px;
+    position: relative;
     
+}
+@media(max-width:767px){
+.services .services-content{
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(300px , 1fr));}
 }
 .services .services-content .serv{
     display: flex;
@@ -354,16 +359,14 @@ margin-right:50px;
 .services .services-content .serv{
     display: flex;
     margin-top: 80px;
-    max-width:100%;
 }
 }
 @media(max-width:767px){
+   
 .services .services-content .serv{
  display: flex;
  flex-direction: column;
  align-items: center;
- width: 350px;
-         margin-left: -20px;
 
 }
 .services .services-content .serv i{
@@ -371,14 +374,12 @@ margin-right:50px;
 margin-right:0px;
 
 }
+.services .services-content .serv .text{
+text-align: center;}
+
 }
 .services .services-content .serv .text{
     flex:1;
-}
-@media(max-width:767px){
-.services .services-content .serv .text{
-    text-align: center;
-}
 }
 
 
@@ -460,15 +461,7 @@ margin-right:0px;
     padding-bottom: 100px;
     padding-top: 100px;
 }
-@media(max-width:767px){
-    .contain {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
 
-}
-}
 .portfolio .shaffel{
     display: flex;
     justify-content: center;
@@ -536,10 +529,10 @@ width: 100%;
 background-color: white;
 transition: 0.3s;
 }
-.box:hover .caption{
+.portfolio .box:hover .caption{
 bottom: -15px;
 }
-.box:hover img{
+.portfolio .box:hover img{
 transform:rotate(3deg)  scale(1.5);
 }
 .portfolio .img-container .caption h4{
@@ -696,6 +689,7 @@ z-index:- 1;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+        max-width: 100%;
     position: relative;
     z-index: 1;
 }
@@ -747,3 +741,631 @@ margin: 0 auto 30px;
     text-transform: capitalize;
 }
 /* end stats */
+/* start skills */
+.skills-content{
+        padding-top: 100px;
+    padding-bottom: 100px;
+}
+.skills-content .big-box{
+    display: flex;
+    justify-content: space-between;
+flex-wrap: wrap;
+}
+.skills-content .big-box > div{
+    flex-basis: 45%;
+}
+@media(min-width:992px){
+    .skills-content .big-box > div{
+        flex-basis: 45%;
+    }
+}
+@media(max-width:992px){
+    .skills-content .big-box > div{
+        flex-basis: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+    }
+}
+.skills-content .big-box > div > div> h3{
+margin: 0 0 30px;
+font-weight: normal;
+text-align: center;
+text-transform: uppercase;
+
+}
+.skills-content .big-box > div > div> p{
+text-align: center;
+color: #777;
+font-size:14px;
+line-height: 1.8;
+margin-bottom: 60px;
+
+}
+.skills-content .big-box .testimonials .contain{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 35px;
+    
+
+}
+
+
+.skills-content .container .contain img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.skills-content .container .contain .text-2{
+flex-basis: 350px;
+margin-top: 10px;
+color: #777;
+font-size: 14px;
+line-height: 1.8;
+border-bottom: 1px solid #ccc;
+}
+@media(max-width:767px){
+    .skills-content .big-box .testimonials .contain{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .skills-content .big-box .testimonials img{
+margin: 0 auto 20px;
+    }
+    .skills-content .container .contain .text-2{
+flex-basis: 150px;
+margin-top: 20px;
+
+}
+}
+.skills-content .container .contain .text-2 p{
+    text-align: right;
+    text-transform: capitalize;
+    color: #333;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.skills-content .big-box ul{
+    display: flex;
+justify-content: center;
+margin-top: 50px;
+margin-bottom: 50px;
+
+}
+.skills-content .big-box ul li{
+    width: 14px;
+    height: 14px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    margin-right: 5px;
+    animation-name: up-and-down;
+animation-duration: 0.9s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+
+.skills-content .big-box ul  .active{
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    animation-delay: 0.3s;
+
+}
+.skills-content .big-box ul .three{
+animation-delay: 0.6s;
+}
+.skills-content .big-box .skills .prog-holder{
+margin-bottom: 25px;
+
+}
+.skills-content .big-box .skills .prog-holder h4{
+margin-bottom: 15px;
+font-weight: normal;
+text-transform: uppercase;
+}
+.skills-content .big-box .skills .prog-holder .prog{
+    background-color: #dedede;
+    height: 25px;
+
+}
+.skills-content .big-box .skills .prog-holder .prog span{
+display: block;
+background-color: var(--main-color);
+height: 100%;
+position: relative;
+}
+.skills-content .big-box .skills .prog-holder .prog span::before{
+    content: attr(data-progress);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+    background-color: black;
+color: white;
+top: -40px;
+right: -20px;
+padding: 4px 0;
+width: 40px;
+height: 30px;
+text-align: center;
+clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 51% 99%, 32% 75%, 0% 75%);
+border-radius: 20%;
+}
+/* end skills */
+/* start quota */
+.quota{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url(../images/StockCake-Digital\ Neon\ Sunrise_1756041477.jpg);
+    background-size: cover;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+.quota::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0 0 0 /60%);
+    z-index: -1;
+}
+.quota .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.quota .container p{
+    margin-top: 70px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: block;
+}
+@media(max-width:767px){
+    .quota .container p{
+    margin-top: 0px;
+    
+}
+}
+.quota .container p span{
+position: relative;
+}
+.quota .container p::after{
+        font-family: "font Awesome 5 free";
+    content:'\f10d';
+    font-weight: 900;
+font-size: 10px;
+position: relative;
+
+
+   
+}
+.quota .container p::before{
+        font-family: "font Awesome 5 free";
+    content:'\f10d';
+    font-weight: 900;
+     font-size: 10px;
+     position: relative;
+  top: -20px;
+  right: 5px;
+
+}
+/* end quota */
+/* start pricing */
+.pricing{
+        padding-top: 100px;
+    padding-bottom: 100px;
+}
+.pricing .plans{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.pricing .plans .plan{
+      background-color: #fcfcfc;
+          text-align: center;
+          transition: 0.3s;
+}
+
+@media(min-width:767px){
+    .pricing .plans{
+flex-wrap: wrap;
+
+}
+.plans .plan{
+    flex-basis: 48%;
+}
+}
+@media(max-width:767px){
+    .pricing .plans{
+flex-wrap: wrap;
+}
+.plans .plan{
+    flex-basis: 100%;
+}
+}
+@media(min-width:991px){
+    .pricing .plans{
+flex-wrap: wrap;
+}
+.plans .plan{
+    flex-basis: 24%;
+}
+}
+
+.pricing .plan .head{
+    border-bottom: 1px solid var(--main-color);
+    border-top: 1px solid var(--main-color);
+    padding: 40px 20px;
+  
+
+}
+.pricing .plan .head h3{
+font-size: 15px;
+text-transform: uppercase;
+color: #aaa;
+}
+.pricing .plan .head span{
+    font-size: 60px;
+    font-weight: 600;
+    position: relative;
+    transition: 0.3s;
+}
+.pricing .plan .head span::after{
+content: " /MO";
+position: relative;
+font-size: 15PX;
+color: #333;
+right: -15px;
+}
+.pricing .plan .head span::before{
+content: "$";
+font-size: 20PX;
+position: relative;
+top:-40px;
+margin-right: 15px;
+transition: 0.3s;
+
+}
+.pricing .plan ul{
+    border-bottom: 1px solid var(--main-color);
+    border-top: 1px solid var(--main-color);
+}
+.pricing .plan ul li{
+padding: 20px;
+position: relative;
+font-size: 12px;
+color: #777;
+font-weight: 500;
+transition: 0.3s;
+
+}
+.pricing .plan ul li:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 1px;
+    background-color: var(--main-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+
+}
+.pricing .plan .foot a{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+        border: 1px solid var(--main-color);
+        width:fit-content;
+        margin: 30px auto;
+        color: black;
+        transition: 0.3s;
+        font-weight: 600;
+      
+}
+.pricing .plan .foot a:hover{
+background-color: #ccc;
+color: white;
+border: none;
+font-weight: bold;
+}
+.pricing .contact-text{
+    text-align: center;
+margin: 50px auto 20px;
+font-size: 20px;
+color: #777;
+font-weight: 500;
+}
+.pricing .contact-link{
+    display: block;
+    margin: 20px auto;
+    background-color: var(--main-color);
+    color: white;
+    width: fit-content;
+    padding: 15px 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.pricing .contact-link:hover{
+    background-color: var(--second-color);
+    font-weight: bolder;
+    border: none;
+    transform: scale(1.(0.5));
+}
+.pricing .plan:hover ul li:not(:last-child)::after{
+     width: 100%;
+    height: 2px;
+}
+.pricing .plan:hover .head span{
+    font-size: 70px;
+}
+.pricing .plan:hover{
+    background-color: #f1f1f1;
+    transform: scale(1.1);
+}
+.pricing .plan:hover span::before{
+    color: var(--second-color);
+}
+.pricing .plan:hover span::after{
+    color: var(--second-color);
+}
+.pricing .plan:hover a{
+    font-weight: bold;   
+
+
+}
+/* end pricing */
+/* START subscribe */
+.subscribe{
+        padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url(../images/StockCake-Prismatic\ Crystal\ Constellation_1756053988.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+    transition: 0.3s;
+    z-index: 1;
+}
+.subscribe::after{
+        content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0 0 0 /50%);
+    z-index: -1
+}
+.subscribe .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+@media(max-width:992px){
+    .subscribe .container{
+        flex-direction: column;
+    }
+}
+.subscribe .container form  {
+display: flex;
+position: relative;
+flex-basis: 500px;
+max-width: 100%;
+max-height: 50px;
+transition: 0.3s;
+}
+.subscribe .container form i {
+ position: absolute;
+ top:50%; 
+ transform: translateY(-50%);
+ left: 25px;
+ transition: 0.3s;
+}
+.subscribe .container form input[type="email"] {
+border: 1px solid white;
+background: none;
+padding: 15px 20px 15px 60px;
+caret-color: var(--main-color);
+flex-basis: calc(100% - 130px);
+border-right: none;
+transition: 0.3s;
+}
+.subscribe .container form input[type="submit"] {
+flex:1;
+    background-color: var(--second-color);
+color: white;
+padding: 10px 20px;
+border: 1px solid white;
+text-transform: capitalize;
+border-left: none;
+transition: 0.3s;
+}
+.subscribe .container form input[type="submit"] ,
+ .subscribe .container form input[type="email"]{
+outline: none;
+}
+.subscribe .container form input[type="submit"]:hover{
+    transform: scalex(1.1);
+    background-color:#19c8fa;
+    color: #333;
+    cursor: pointer;
+}
+.subscribe form ::placeholder{
+    color: white;
+    font-weight: bold;
+}
+.subscribe .container p{
+line-height: 2;
+margin-left: 50px;
+}
+@media(max-width:992px){
+    .subscribe .container p{
+        margin: 30px 0 0 ;
+    }
+    .subscribe .container p{
+        text-align: center;
+    }
+}
+/* end subscribe */
+/* start contact */
+.contact{
+            padding-top: 100px;
+    padding-bottom: 100px;
+}
+.contact .contact-content{
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width:992px){
+   .contact .contact-content{
+    flex-direction: column;
+   }
+}
+.contact .contact-content form{
+flex-basis: 70%;
+padding-left: 50px;
+}
+
+.contact .contact-content form .Main-input{
+    display: block;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.contact .contact-content form .Main-input{
+    outline: none;
+}
+.contact .contact-content form textarea{
+    height: 200px;
+}
+.contact .contact-content form input[type="submit"]{
+    display: flex;
+    margin-left: auto;
+color: white;
+background-color: var(--main-color);
+padding: 20px;
+border: none;
+cursor: pointer;
+transition: 0.3s;
+}
+.contact .contact-content form input[type="submit"]:hover{
+    background-color: var(--second-color);
+        transform: scalex(1.1);
+    color: #333;
+    cursor: pointer;
+}
+.contact form ::placeholder {
+    font-weight: bold;
+    text-transform: uppercase;
+    
+
+}
+.contact .contact-content .info{
+    flex-basis: 25%;
+}
+@media(max-width:992px){
+  .contact .contact-content .info{
+    order: -1;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+   }
+   .contact .contact-content form{
+padding-left: 0px;
+}
+.contact .contact-content form input[type="submit"]{
+ margin: auto;
+}
+}
+.contact .contact-content .info h4{
+text-transform: uppercase;
+margin-bottom: 30px;
+font-weight: 600;
+font-size: 18px;
+}
+.contact .contact-content .info span{
+display: block;
+color: #777;
+margin-bottom: 10px;
+}
+.contact .contact-content .info div:last-of-type {
+margin-top: 85px;
+}
+.contact .contact-content .info address{
+color: #777;
+line-height: 2;
+}
+@media(max-width:992px){
+
+.contact .contact-content .info div:last-of-type {
+margin-top: 0px;
+}
+.contact .contact-content .info address{
+margin-bottom: 40px;
+}
+}
+/* END contact */
+/* start footer */
+.footer{
+            padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url(../images/StockCake-Misty\ Cyber\ Night_1756102150.jpg);
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+.footer::after{
+        content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0 0 0 /50%);
+    z-index: -1
+}
+.footer .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.footer .container img{
+    margin: 0 0 20px;
+}
+.footer p:not(.copyright){
+    text-transform: uppercase;
+    padding: 20px;
+    border-bottom: 1px solid white;
+    font-size: 22px;
+    margin: 20px auto;
+}
+
+.footer .social-icons i{
+padding: 10px 15px;
+}
+.footer .copyright{
+margin-top: 60px;
+margin-bottom: -20px;
+word-spacing:2px;
+
+}
+.footer .copyright span{
+color: var(--main-color);
+font-weight: bold;
+
+}
+/* end footer */
