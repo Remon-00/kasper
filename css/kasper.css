@@ -469,6 +469,7 @@ text-align: center;}
 .portfolio .shaffel li{
     padding: 10px;
     transition: 0.3s;
+    font-weight: bold;
 }
 .portfolio .shaffel li:hover{
         color: white;
@@ -489,8 +490,7 @@ text-align: center;}
     flex-wrap: wrap;
     margin-top: 60px;
 }
- .box{
-    flex-basis: 25%;
+.portfolio .box{
     position: relative;
     overflow: hidden;
     
